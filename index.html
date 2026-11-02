@@ -11,76 +11,125 @@
 :root{
  color-scheme:dark;
  --bg:#111318;
- --panel:#202630;
  --text:#f8fafc;
- --muted:#bdc7d5;
- --line:#ffffff29;
+ --muted:#c5cfdb;
+ --line:#ffffff30;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
- margin:0;background:var(--bg);color:var(--text);
- font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif
+ margin:0;
+ background:var(--bg);
+ color:var(--text);
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
 }
 header{
- background:#1b2029;padding:20px 16px;
- border-bottom:1px solid var(--line)
+ background:#1b2029;
+ padding:22px 16px;
+ border-bottom:1px solid var(--line);
 }
-header h1{margin:0;font-size:25px}
-header p{margin:6px 0 0;color:var(--muted);font-size:13px}
-main{max-width:760px;margin:auto;padding:14px 13px 45px}
+header h1{margin:0;font-size:26px}
+header p{margin:7px 0 0;color:var(--muted);font-size:13px}
+main{max-width:800px;margin:auto;padding:14px 13px 45px}
 h2{font-size:20px;margin:0 0 14px}
-h3{font-size:16px;margin:12px 0}
+h3{font-size:16px;margin:15px 0 10px}
 p{line-height:1.5}
 small,.muted{font-size:13px;color:#e2e8f0}
 button{
- border:0;border-radius:11px;padding:12px 14px;
- background:#3279ed;color:white;font-size:14px;
- font-weight:600;cursor:pointer
+ border:0;
+ border-radius:11px;
+ padding:12px 14px;
+ background:#3279ed;
+ color:white;
+ font-size:14px;
+ font-weight:600;
+ cursor:pointer;
 }
-button:disabled{opacity:.4}
+button:disabled{opacity:.45}
 button.secondary{background:#e3ebf5;color:#18283d}
 button.danger{background:#ffe0e5;color:#9f1239}
 button.soft{background:#ffffff23}
 button.small{padding:8px 10px;font-size:12px}
 input,select,textarea{
- width:100%;min-width:0;background:#273242;color:white;
- border:1px solid #79869a;border-radius:10px;
- padding:11px;margin-top:5px;font-size:16px;
- font-family:inherit
+ width:100%;
+ min-width:0;
+ background:#273242;
+ color:white;
+ border:1px solid #79869a;
+ border-radius:10px;
+ padding:11px;
+ margin-top:5px;
+ font-size:16px;
+ font-family:inherit;
 }
 textarea{min-height:75px;resize:vertical}
 input::placeholder,textarea::placeholder{color:#abb9ca}
-label{display:block;font-size:13px;font-weight:600;margin:8px 0}
-.card{border-radius:17px;padding:17px;margin-bottom:13px}
+label{
+ display:block;
+ font-size:13px;
+ font-weight:600;
+ margin:8px 0;
+}
+.card{
+ border-radius:17px;
+ padding:17px;
+ margin-bottom:13px;
+}
 .hidden{display:none!important}
 .row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .between{justify-content:space-between}
 .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .fields{
- display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:9px;
 }
 .full{grid-column:1/-1}
 .notice{
- background:#ffffff1c;padding:12px;border-radius:11px;
- margin:10px 0;line-height:1.5
+ background:#ffffff1c;
+ padding:12px;
+ border-radius:11px;
+ margin:10px 0;
+ line-height:1.5;
 }
 .divider{height:1px;background:var(--line);margin:16px 0}
-.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
-.stat{background:#ffffff1b;padding:13px;border-radius:12px}
+.stats{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:9px;
+}
+.stat{
+ background:#ffffff1b;
+ padding:13px;
+ border-radius:12px;
+}
 .stat small{display:block}
-.stat strong{display:block;font-size:23px;margin-top:7px}
+.stat strong{
+ display:block;
+ font-size:22px;
+ margin-top:7px;
+ overflow-wrap:anywhere;
+}
 .page{display:none}
 .page.active{display:block}
 .back{
- background:#ffffff20;margin-bottom:14px;
- display:flex;align-items:center;gap:9px
+ background:#ffffff20;
+ margin-bottom:14px;
+ display:flex;
+ align-items:center;
+ gap:9px;
 }
 #homeSummary{background:#173d78}
 .menu{
- width:100%;display:flex;align-items:center;
- justify-content:space-between;text-align:left;
- padding:18px;margin-bottom:11px;border-radius:16px;
- border:1px solid #ffffff18
+ width:100%;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ text-align:left;
+ padding:18px;
+ margin-bottom:11px;
+ border-radius:16px;
+ border:1px solid #ffffff18;
 }
 .menu strong{display:block;font-size:17px}
 .menu small{display:block;margin-top:6px}
@@ -91,39 +140,98 @@ label{display:block;font-size:13px;font-weight:600;margin:8px 0}
 .menu-weight{background:#754018}
 .menu-progress{background:#175c61}
 .menu-backup{background:#58402f}
+.menu-calculator{background:#365376}
 #trainingCard{background:#19543b}
 #historyCard{background:#665414}
 #exercisesCard{background:#493274}
 #weightCard{background:#754018}
 #progressCard{background:#175c61}
 #backupCard{background:#58402f}
+#calculatorCard{background:#365376}
 .exercise-card,.history-card{
- background:#ffffff18;border:1px solid #ffffff37;
- padding:13px;border-radius:13px;margin:12px 0
+ background:#ffffff18;
+ border:1px solid #ffffff37;
+ padding:13px;
+ border-radius:13px;
+ margin:12px 0;
 }
-.entry{border-bottom:1px solid var(--line);padding:12px 0}
+.entry{
+ border-bottom:1px solid var(--line);
+ padding:12px 0;
+}
 .entry:last-child{border-bottom:0}
 .entry strong,.entry small{display:block}
 .entry small{margin-top:5px;line-height:1.5}
 .set-head,.set-row{
- display:grid;grid-template-columns:32px 1fr 1fr 36px;
- gap:7px;align-items:center;margin:8px 0
+ display:grid;
+ grid-template-columns:32px 1fr 1fr 36px;
+ gap:7px;
+ align-items:center;
+ margin:8px 0;
 }
 .set-head{font-size:12px;color:#e2e8f0}
-.set-row input{margin:0;text-align:center;padding:10px 5px}
+.set-row input{
+ margin:0;
+ text-align:center;
+ padding:10px 5px;
+}
 .set-row button{padding:10px 0}
 .picker{display:grid;gap:7px}
 .picker button{text-align:left;background:#ffffff24}
 .picker button:disabled{opacity:.4}
 .chart{
- width:100%;height:215px;background:#ffffff14;
- border-radius:12px;margin-top:12px
+ width:100%;
+ height:215px;
+ background:#ffffff14;
+ border-radius:12px;
+ margin-top:12px;
 }
 .chart svg{width:100%;height:100%}
 .empty{padding:12px 0;font-size:13px;color:#e2e8f0}
+.save-status{
+ display:inline-flex;
+ align-items:center;
+ gap:6px;
+ background:#ffffff22;
+ padding:8px 11px;
+ border-radius:9px;
+ color:#e7ffe9;
+ font-size:12px;
+ margin:10px 0;
+}
+.cal-result{
+ background:#ffffff1b;
+ border-radius:13px;
+ padding:15px;
+ margin:12px 0;
+}
+.cal-result strong{
+ display:block;
+ font-size:27px;
+ margin:6px 0;
+}
+.cal-result small{display:block}
+.cal-grid{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:9px;
+}
+.cal-grid>div{
+ background:#ffffff16;
+ border-radius:11px;
+ padding:12px;
+}
+.cal-grid strong{
+ display:block;
+ font-size:19px;
+ margin-top:6px;
+}
 @media(max-width:370px){
  .card{padding:13px}
- .set-head,.set-row{grid-template-columns:27px 1fr 1fr 32px;gap:5px}
+ .set-head,.set-row{
+  grid-template-columns:27px 1fr 1fr 32px;
+  gap:5px;
+ }
 }
 </style>
 </head>
@@ -138,8 +246,10 @@ label{display:block;font-size:13px;font-weight:600;margin:8px 0}
 
 <!-- HAUPTSEITE -->
 <div id="page-home" class="page active">
+
 <section class="card" id="homeSummary">
 <h2>Meine Übersicht</h2>
+
 <div class="stats">
 <div class="stat">
 <small>Trainingseinheiten</small>
@@ -158,107 +268,173 @@ label{display:block;font-size:13px;font-weight:600;margin:8px 0}
 <strong id="statWeight">–</strong>
 </div>
 </div>
+
 <div class="notice" id="lastTraining"></div>
 </section>
 
 <h2>Meine Kategorien</h2>
 
 <button class="menu menu-training" data-page="training">
-<span><strong>Training erfassen</strong>
-<small>Neue Einheit, Sätze, Gewicht und Wiederholungen</small></span>
+<span>
+<strong>Training erfassen</strong>
+<small>Trainingsgewichte, Sätze und Wiederholungen</small>
+</span>
 <span class="arrow">›</span>
 </button>
 
 <button class="menu menu-history" data-page="history">
-<span><strong>Trainingshistorie</strong>
-<small>Alle bisherigen Einheiten ansehen und bearbeiten</small></span>
+<span>
+<strong>Trainingshistorie</strong>
+<small>Frühere Einheiten ansehen und bearbeiten</small>
+</span>
 <span class="arrow">›</span>
 </button>
 
 <button class="menu menu-exercises" data-page="exercises">
-<span><strong>Meine Übungen</strong>
-<small>Übungen erstellen, bearbeiten und verwalten</small></span>
+<span>
+<strong>Meine Übungen</strong>
+<small>Übungen erstellen und verwalten</small>
+</span>
 <span class="arrow">›</span>
 </button>
 
 <button class="menu menu-weight" data-page="weight">
-<span><strong>Mein Körpergewicht</strong>
-<small>Gewicht eintragen und Verlauf ansehen</small></span>
+<span>
+<strong>Mein Körpergewicht</strong>
+<small>Gewicht erfassen und Verlauf ansehen</small>
+</span>
 <span class="arrow">›</span>
 </button>
 
 <button class="menu menu-progress" data-page="progress">
-<span><strong>Meine Fortschritte</strong>
-<small>Trainingsgewichte und Wiederholungen vergleichen</small></span>
+<span>
+<strong>Meine Fortschritte</strong>
+<small>Trainingsgewichte und Wiederholungen vergleichen</small>
+</span>
 <span class="arrow">›</span>
 </button>
 
 <button class="menu menu-backup" data-page="backup">
-<span><strong>Datensicherung</strong>
-<small>Trainingsdaten exportieren oder importieren</small></span>
+<span>
+<strong>Datensicherung</strong>
+<small>Trainingsdaten exportieren und importieren</small>
+</span>
 <span class="arrow">›</span>
 </button>
+
+<button class="menu menu-calculator" data-page="calculator">
+<span>
+<strong>Kalorienbedarfsrechner</strong>
+<small>Grundumsatz, Gesamtbedarf und Kalorienziele</small>
+</span>
+<span class="arrow">›</span>
+</button>
+
 </div>
 
 <!-- TRAINING -->
 <div id="page-training" class="page">
+
 <button class="back" data-back="home">‹ Zur Hauptseite</button>
+
 <section class="card" id="trainingCard">
+
 <div class="row between">
 <h2 id="trainingTitle">Training erfassen</h2>
-<button id="newTraining" class="secondary small">Neu</button>
+<button id="newTraining" class="secondary small">
++ Neues Training
+</button>
 </div>
+
+<div class="save-status" id="trainingStatus">
+Automatische Speicherung aktiv
+</div>
+
 <div class="fields">
+
 <label>Trainingsdatum
 <input id="trainingDate" type="date">
 </label>
+
 <label>Körpergewicht (kg)
-<input id="trainingBodyweight" type="number" min="1" step="0.1" placeholder="85.4">
+<input id="trainingBodyweight"
+type="number" min="1" step="0.1"
+placeholder="85.4">
 </label>
+
 <label class="full">Notizen
-<textarea id="trainingNotes" placeholder="Tagesform, Schlaf, Besonderheiten ..."></textarea>
+<textarea id="trainingNotes"
+placeholder="Tagesform, Schlaf, Besonderheiten ..."></textarea>
 </label>
+
 </div>
 
 <div class="divider"></div>
+
 <h3>Übungen dieser Einheit</h3>
 <div id="trainingExercises"></div>
 
 <div class="divider"></div>
-<h3>Übung hinzufügen</h3>
-<input id="exerciseSearch" type="search" placeholder="Übung suchen ...">
-<div id="exercisePicker" class="picker" style="margin-top:10px"></div>
 
-<div class="actions">
-<button id="saveTraining">Training speichern</button>
-<button id="cancelTraining" class="secondary">Zurücksetzen</button>
-</div>
-<p class="muted">Die Werte der letzten Trainingseinheit werden beim Hinzufügen einer Übung vorgeschlagen.</p>
+<h3>Übung hinzufügen</h3>
+<input id="exerciseSearch"
+type="search" placeholder="Übung suchen ...">
+
+<div id="exercisePicker"
+class="picker" style="margin-top:10px"></div>
+
+<p class="muted">
+Alle Änderungen werden automatisch gespeichert.
+Auch unvollständige Eingaben bleiben beim Verlassen
+dieser Ansicht erhalten.
+</p>
+
 </section>
 </div>
 
 <!-- HISTORIE -->
 <div id="page-history" class="page">
+
 <button class="back" data-back="home">‹ Zur Hauptseite</button>
+
 <section class="card" id="historyCard">
 <h2>Trainingshistorie</h2>
+<p class="muted">
+Beim Bearbeiten einer früheren Einheit werden
+alle Änderungen automatisch gespeichert.
+</p>
 <div id="historyList"></div>
 </section>
+
 </div>
 
 <!-- ÜBUNGEN -->
 <div id="page-exercises" class="page">
+
 <button class="back" data-back="home">‹ Zur Hauptseite</button>
+
 <section class="card" id="exercisesCard">
+
 <div class="row between">
 <h2>Meine Übungen</h2>
-<button id="newExercise" class="secondary">+ Neu</button>
+<button id="newExercise" class="secondary">
++ Neue Übung
+</button>
 </div>
-<form id="exerciseForm" class="hidden">
+
+<form id="exerciseForm" class="hidden" onsubmit="return false">
+
+<div class="save-status">
+Automatische Speicherung aktiv
+</div>
+
 <div class="fields">
+
 <label class="full">Übungsname
-<input id="exerciseName" required placeholder="z. B. Kniebeugen">
+<input id="exerciseName"
+placeholder="z. B. Kniebeugen">
 </label>
+
 <label>Muskelgruppe
 <select id="exerciseGroup">
 <option>Beine</option>
@@ -271,76 +447,280 @@ label{display:block;font-size:13px;font-weight:600;margin:8px 0}
 <option>Andere</option>
 </select>
 </label>
+
 <label>Übungsart
 <select id="exerciseType">
 <option value="weight">Gewicht in kg</option>
 <option value="bodyweight">Körpergewicht</option>
 </select>
 </label>
+
 </div>
+
 <div class="actions">
-<button type="submit">Speichern</button>
-<button type="button" id="cancelExercise" class="secondary">Abbrechen</button>
+<button type="button" id="closeExercise"
+class="secondary">Schliessen</button>
 </div>
-<div class="divider"></div>
+
 </form>
+
 <div id="exerciseList"></div>
+
 </section>
 </div>
 
 <!-- KÖRPERGEWICHT -->
 <div id="page-weight" class="page">
+
 <button class="back" data-back="home">‹ Zur Hauptseite</button>
+
 <section class="card" id="weightCard">
+
+<div class="row between">
 <h2>Mein Körpergewicht</h2>
-<form id="weightForm">
-<div class="fields">
-<label>Datum
-<input id="weightDate" type="date" required>
-</label>
-<label>Gewicht (kg)
-<input id="weightValue" type="number" min="1" step="0.1" required placeholder="85.4">
-</label>
+<button id="newWeight" class="secondary small">
++ Neuer Eintrag
+</button>
 </div>
-<button type="submit">Gewicht speichern</button>
-</form>
+
+<div class="save-status" id="weightStatus">
+Automatische Speicherung aktiv
+</div>
+
+<div class="fields">
+
+<label>Datum
+<input id="weightDate" type="date">
+</label>
+
+<label>Gewicht (kg)
+<input id="weightValue" type="number"
+min="1" step="0.1" placeholder="85.4">
+</label>
+
+</div>
+
+<p class="muted">
+Sobald ein gültiges Gewicht eingetragen ist,
+wird es automatisch gespeichert.
+</p>
+
 <h3>Gewichtsverlauf</h3>
-<div class="chart" id="weightChart"></div>
+<div id="weightChart" class="chart"></div>
+
 <h3>Gespeicherte Werte</h3>
 <div id="weightList"></div>
+
 </section>
 </div>
 
 <!-- FORTSCHRITT -->
 <div id="page-progress" class="page">
+
 <button class="back" data-back="home">‹ Zur Hauptseite</button>
+
 <section class="card" id="progressCard">
+
 <h2>Meine Fortschritte</h2>
+
 <label>Übung auswählen
 <select id="progressExercise"></select>
 </label>
+
 <div id="progressSummary" class="stats"></div>
+
 <div id="exerciseChart" class="chart"></div>
-<p class="muted">Bei Übungen mit Gewichten wird das höchste Trainingsgewicht pro Einheit dargestellt. Bei Körpergewichtsübungen die höchste Wiederholungszahl.</p>
+
+<p class="muted">
+Bei Übungen mit Gewichten wird das höchste
+Trainingsgewicht pro Einheit dargestellt.
+Bei Körpergewichtsübungen die höchste Wiederholungszahl.
+</p>
+
 <h3>Trainingsverlauf</h3>
 <div id="progressHistory"></div>
+
 </section>
 </div>
 
-<!-- BACKUP -->
+<!-- DATENSICHERUNG -->
 <div id="page-backup" class="page">
+
 <button class="back" data-back="home">‹ Zur Hauptseite</button>
+
 <section class="card" id="backupCard">
+
 <h2>Datensicherung</h2>
-<p>Deine Übungen, Trainingseinheiten und Körpergewichte werden auf diesem Gerät gespeichert.</p>
-<p class="muted">Ein Backup schützt deine Daten, falls du das iPhone wechselst oder Browserdaten gelöscht werden.</p>
+
+<p>
+Deine Übungen, Trainingseinheiten und
+Körpergewichte werden automatisch lokal gespeichert.
+</p>
+
+<p class="muted">
+Ein Backup schützt deine Daten, falls du dein
+iPhone wechselst oder Browserdaten gelöscht werden.
+</p>
+
 <div class="actions">
-<button id="exportBackup" class="secondary">Backup herunterladen</button>
-<button id="importBackup" class="secondary">Backup importieren</button>
-<input id="backupFile" class="hidden" type="file" accept=".json,application/json">
+<button id="exportBackup" class="secondary">
+Backup herunterladen
+</button>
+
+<button id="importBackup" class="secondary">
+Backup importieren
+</button>
+
+<input id="backupFile" class="hidden"
+type="file" accept=".json,application/json">
 </div>
+
 <div class="divider"></div>
-<p class="muted">GitHub Pages veröffentlicht nur den Programmcode. Deine persönlichen Trainingsdaten werden nicht automatisch in GitHub gespeichert oder zwischen Geräten synchronisiert.</p>
+
+<p class="muted">
+GitHub Pages veröffentlicht den Programmcode.
+Deine persönlichen Trainingsdaten werden nicht
+automatisch mit GitHub synchronisiert.
+</p>
+
+</section>
+</div>
+
+<!-- KALORIENRECHNER -->
+<div id="page-calculator" class="page">
+
+<button class="back" data-back="home">‹ Zur Hauptseite</button>
+
+<section class="card" id="calculatorCard">
+
+<h2>Kalorienbedarfsrechner</h2>
+
+<p class="muted">
+Berechnung nach Mifflin-St. Jeor mit frei
+wählbarem Aktivitätsfaktor.
+</p>
+
+<div class="save-status">
+Einstellungen werden automatisch gespeichert
+</div>
+
+<div class="fields">
+
+<label>Geschlecht
+<select id="calcSex">
+<option value="male">Mann</option>
+<option value="female">Frau</option>
+</select>
+</label>
+
+<label>Alter (Jahre)
+<input id="calcAge" type="number"
+min="15" max="110" value="43">
+</label>
+
+<label>Körpergewicht (kg)
+<input id="calcWeight" type="number"
+min="20" max="400" step="0.1" value="85.4">
+</label>
+
+<label>Körpergrösse (cm)
+<input id="calcHeight" type="number"
+min="100" max="250" value="183">
+</label>
+
+<label class="full">Aktivitätsfaktor
+<select id="calcActivity">
+<option value="1.0">1.00 – Rechnerischer Grundumsatz</option>
+<option value="1.1">1.10 – Sehr geringe Aktivität</option>
+<option value="1.2">1.20 – Überwiegend sitzend</option>
+<option value="1.3">1.30 – Leicht aktiv</option>
+<option value="1.4">1.40 – Alltag mit etwas Bewegung</option>
+<option value="1.5">1.50 – Mässig aktiv</option>
+<option value="1.6">1.60 – Aktiv</option>
+<option value="1.7">1.70 – Sehr aktiv</option>
+<option value="1.8">1.80 – Hohe tägliche Aktivität</option>
+<option value="1.9">1.90 – Sehr hohe Gesamtaktivität</option>
+<option value="2.0">2.00 – Extrem hohe Gesamtaktivität</option>
+<option value="custom">Eigenen Faktor eingeben</option>
+</select>
+</label>
+
+<label class="full hidden" id="customActivityBox">
+Eigener Aktivitätsfaktor
+<input id="calcCustomActivity"
+type="number" min="1" max="3"
+step="0.05" value="1.5">
+</label>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="cal-result">
+<small>Geschätzter täglicher Erhaltungsbedarf</small>
+<strong id="calcMaintenance">– kcal</strong>
+<small>Kalorienmenge zur ungefähren Gewichtserhaltung</small>
+</div>
+
+<div class="cal-grid">
+
+<div>
+<small>Grundumsatz</small>
+<strong id="calcBmr">–</strong>
+<small>kcal / Tag</small>
+</div>
+
+<div>
+<small>Aktivitätsfaktor</small>
+<strong id="calcFactor">–</strong>
+<small>PAL</small>
+</div>
+
+<div>
+<small>Moderates Defizit (−10 %)</small>
+<strong id="calcDeficit10">–</strong>
+<small>kcal / Tag</small>
+</div>
+
+<div>
+<small>Defizit (−20 %)</small>
+<strong id="calcDeficit20">–</strong>
+<small>kcal / Tag</small>
+</div>
+
+<div>
+<small>Leichter Überschuss (+5 %)</small>
+<strong id="calcSurplus5">–</strong>
+<small>kcal / Tag</small>
+</div>
+
+<div>
+<small>Überschuss (+10 %)</small>
+<strong id="calcSurplus10">–</strong>
+<small>kcal / Tag</small>
+</div>
+
+</div>
+
+<h3>Berechnung</h3>
+
+<div class="notice" id="calcFormula"></div>
+
+<p class="muted">
+Der Aktivitätsfaktor berücksichtigt die gesamte
+Tagesaktivität einschliesslich Bewegung und Training.
+Die Trainingskalorien sollten nicht nochmals
+separat addiert werden.
+</p>
+
+<p class="muted">
+Die Formel liefert einen Ausgangswert, keine exakte
+Messung. Der tatsächliche Erhaltungsbedarf kann
+abweichen. Ein Vergleich mit Kalorienaufnahme und
+durchschnittlichem Körpergewicht über mehrere
+Wochen ist aussagekräftiger.
+</p>
+
 </section>
 </div>
 
@@ -349,15 +729,24 @@ label{display:block;font-size:13px;font-weight:600;margin:8px 0}
 <script>
 "use strict";
 
-/* Unveränderte Speicherkennungen der bisherigen Fitness-App */
+/* Bisherige Speicherkennungen bleiben unverändert */
 const EXERCISE_KEY="fitness_tracker_exercises_v1";
 const SESSION_KEY="fitness_tracker_sessions_v1";
 const BODYWEIGHT_KEY="fitness_tracker_bodyweights_v1";
 
+/* Neue zusätzliche Speicherkennungen */
+const CALC_KEY="fitness_tracker_calculator_v1";
+const ACTIVE_SESSION_KEY="fitness_tracker_active_session_v1";
+const EXERCISE_FORM_KEY="fitness_tracker_exercise_form_v1";
+const WEIGHT_FORM_KEY="fitness_tracker_weight_form_v1";
+
 const $=id=>document.getElementById(id);
-const fmt=n=>Number(n).toLocaleString("de-CH",{
+
+function fmt(n){
+ return Number(n).toLocaleString("de-CH",{
  maximumFractionDigits:2
-});
+ });
+}
 
 function uid(){
  return typeof crypto!=="undefined"&&crypto.randomUUID
@@ -385,7 +774,23 @@ function load(key,fallback){
  try{
  const v=JSON.parse(localStorage.getItem(key));
  return v===null?fallback:v;
- }catch{return fallback}
+ }catch{
+ return fallback;
+ }
+}
+
+function node(tag,text,cls=""){
+ const el=document.createElement(tag);
+ el.textContent=text;
+ if(cls)el.className=cls;
+ return el;
+}
+
+function btn(text,action,cls=""){
+ const el=node("button",text,cls);
+ el.type="button";
+ el.onclick=action;
+ return el;
 }
 
 const defaults=[
@@ -410,16 +815,37 @@ if(!Array.isArray(exercises)){
 if(!Array.isArray(sessions))sessions=[];
 if(!Array.isArray(bodyweights))bodyweights=[];
 
-let draft=[];
-let editingSession=null;
+let activeSessionId=load(ACTIVE_SESSION_KEY,null);
 let editingExercise=null;
+let activeWeightId=null;
 let currentPage="home";
+
+let calculator=load(CALC_KEY,{
+ sex:"male",
+ age:"43",
+ weight:"85.4",
+ height:"183",
+ activity:"1.5",
+ customActivity:"1.5"
+});
+
+if(!calculator||typeof calculator!=="object"){
+ calculator={
+ sex:"male",age:"43",weight:"85.4",
+ height:"183",activity:"1.5",customActivity:"1.5"
+ };
+}
+
+let exerciseFormDraft=load(EXERCISE_FORM_KEY,null);
+let weightFormDraft=load(WEIGHT_FORM_KEY,null);
 
 function save(){
  try{
  localStorage.setItem(EXERCISE_KEY,JSON.stringify(exercises));
  localStorage.setItem(SESSION_KEY,JSON.stringify(sessions));
  localStorage.setItem(BODYWEIGHT_KEY,JSON.stringify(bodyweights));
+ localStorage.setItem(CALC_KEY,JSON.stringify(calculator));
+ localStorage.setItem(ACTIVE_SESSION_KEY,JSON.stringify(activeSessionId));
  return true;
  }catch(err){
  alert("Speichern fehlgeschlagen: "+err.message);
@@ -427,31 +853,31 @@ function save(){
  }
 }
 
-function node(tag,text,cls=""){
- const el=document.createElement(tag);
- el.textContent=text;
- if(cls)el.className=cls;
- return el;
+function setStatus(id,text){
+ $(id).textContent=text;
 }
 
-function btn(text,action,cls=""){
- const el=node("button",text,cls);
- el.type="button";
- el.onclick=action;
- return el;
-}
+/* NAVIGATION */
 
-/* Navigation: Eine Ansicht gleichzeitig */
 function openPage(name){
- if(!$( "page-"+name))return;
+ const target=$("page-"+name);
+ if(!target)return;
+
  currentPage=name;
 
  document.querySelectorAll(".page").forEach(page=>{
- page.classList.toggle("active",page.id==="page-"+name);
+ page.classList.toggle("active",page===target);
  });
 
- window.scrollTo({top:0,behavior:"instant"});
- renderAll();
+ if(name==="training")renderTraining();
+ if(name==="history")renderHistory();
+ if(name==="exercises")renderExercises();
+ if(name==="weight")renderWeights();
+ if(name==="progress")renderProgress();
+ if(name==="calculator")renderCalculator();
+ if(name==="home")renderDashboard();
+
+ window.scrollTo(0,0);
 }
 
 document.querySelectorAll("[data-page]").forEach(el=>{
@@ -462,7 +888,8 @@ document.querySelectorAll("[data-back]").forEach(el=>{
  el.onclick=()=>openPage(el.dataset.back);
 });
 
-/* Übersicht */
+/* ÜBERSICHT */
+
 function weekStart(){
  const d=new Date();
  d.setDate(d.getDate()-((d.getDay()+6)%7));
@@ -474,20 +901,20 @@ function weekStart(){
 function renderDashboard(){
  $("statSessions").textContent=sessions.length;
  $("statExercises").textContent=exercises.length;
+
  $("statWeek").textContent=sessions.filter(s=>
  s.date>=weekStart()&&s.date<=today()
  ).length;
 
- const sortedWeights=[...bodyweights].sort(
- (a,b)=>b.date.localeCompare(a.date)
- );
+ const weights=[...bodyweights]
+ .filter(w=>Number.isFinite(Number(w.weight))&&Number(w.weight)>0)
+ .sort((a,b)=>b.date.localeCompare(a.date));
 
- $("statWeight").textContent=sortedWeights.length
- ?fmt(sortedWeights[0].weight)+" kg":"–";
+ $("statWeight").textContent=weights.length
+ ?fmt(weights[0].weight)+" kg":"–";
 
- const last=[...sessions].sort(
- (a,b)=>b.date.localeCompare(a.date)
- )[0];
+ const last=[...sessions]
+ .sort((a,b)=>b.date.localeCompare(a.date))[0];
 
  $("lastTraining").textContent=last
  ?"Letztes Training: "+dateLabel(last.date)+
@@ -495,39 +922,124 @@ function renderDashboard(){
  :"Noch keine Trainingseinheit gespeichert.";
 }
 
-/* Training */
+/* TRAINING – AUTOMATISCH SPEICHERN */
+
+function getActiveSession(){
+ return sessions.find(s=>s.id===activeSessionId)||null;
+}
+
+function ensureSession(){
+ let s=getActiveSession();
+
+ if(!s){
+ s={
+ id:uid(),
+ date:$("trainingDate").value||today(),
+ bodyweight:null,
+ notes:"",
+ exercises:[]
+ };
+ sessions.push(s);
+ activeSessionId=s.id;
+ }
+
+ return s;
+}
+
+function markTrainingSaved(){
+ setStatus("trainingStatus","Automatisch gespeichert");
+}
+
+function trainingChanged(){
+ const s=ensureSession();
+
+ s.date=$("trainingDate").value||today();
+
+ const bw=$("trainingBodyweight").value.trim();
+
+ s.bodyweight=bw===""?null:Number(bw);
+ s.notes=$("trainingNotes").value;
+
+ syncTrainingWeight(s);
+ save();
+ markTrainingSaved();
+ renderDashboard();
+}
+
+function syncTrainingWeight(s){
+ bodyweights=bodyweights.filter(w=>w.sessionId!==s.id);
+
+ if(
+ s.bodyweight!==null&&
+ Number.isFinite(Number(s.bodyweight))&&
+ Number(s.bodyweight)>0
+ ){
+ bodyweights.push({
+ id:uid(),
+ sessionId:s.id,
+ date:s.date,
+ weight:Number(s.bodyweight)
+ });
+ }
+}
+
 function previousExercise(id,excludeId=null){
- const found=[...sessions]
+ const list=[...sessions]
  .filter(s=>s.id!==excludeId&&
  s.exercises.some(e=>e.exerciseId===id))
  .sort((a,b)=>b.date.localeCompare(a.date));
 
- if(!found.length)return null;
+ if(!list.length)return null;
 
  return {
- session:found[0],
- exercise:found[0].exercises.find(e=>e.exerciseId===id)
+ session:list[0],
+ exercise:list[0].exercises.find(e=>e.exerciseId===id)
  };
+}
+
+function renderTraining(){
+ const s=getActiveSession();
+
+ $("trainingTitle").textContent=s
+ ?"Training bearbeiten":"Training erfassen";
+
+ $("trainingDate").value=s?.date||today();
+ $("trainingBodyweight").value=s?.bodyweight??"";
+ $("trainingNotes").value=s?.notes||"";
+
+ setStatus(
+ "trainingStatus",
+ s?"Alle Änderungen werden automatisch gespeichert":
+ "Automatische Speicherung aktiv"
+ );
+
+ renderTrainingExercises();
+ renderPicker();
 }
 
 function addExerciseToTraining(id){
  const ex=exercises.find(e=>e.id===id);
  if(!ex)return;
 
- if(draft.some(e=>e.exerciseId===id)){
- alert("Diese Übung ist bereits enthalten.");
+ const s=ensureSession();
+
+ if(s.exercises.some(e=>e.exerciseId===id)){
  return;
  }
 
- const previous=previousExercise(id,editingSession);
+ const prev=previousExercise(id,s.id);
 
- const sets=previous
- ?previous.exercise.sets.map(s=>({
- id:uid(),kg:String(s.kg??0),reps:String(s.reps??"")
+ const sets=prev
+ ?prev.exercise.sets.map(set=>({
+ kg:String(set.kg??""),
+ reps:String(set.reps??"")
  }))
- :[{id:uid(),kg:ex.type==="bodyweight"?"0":"",reps:""}];
+ :[{
+ kg:ex.type==="bodyweight"?"0":"",
+ reps:""
+ }];
 
- draft.push({
+ s.exercises.push({
  exerciseId:ex.id,
  name:ex.name,
  group:ex.group,
@@ -535,8 +1047,11 @@ function addExerciseToTraining(id){
  sets
  });
 
- renderDraft();
+ save();
+ markTrainingSaved();
+ renderTrainingExercises();
  renderPicker();
+ renderDashboard();
 }
 
 function renderPicker(){
@@ -544,6 +1059,7 @@ function renderPicker(){
  box.replaceChildren();
 
  const q=$("exerciseSearch").value.trim().toLowerCase();
+ const s=getActiveSession();
 
  const list=[...exercises]
  .filter(e=>e.name.toLowerCase().includes(q))
@@ -554,55 +1070,73 @@ function renderPicker(){
  }
 
  for(const ex of list){
- const exists=draft.some(d=>d.exerciseId===ex.id);
+ const exists=s?.exercises.some(e=>e.exerciseId===ex.id);
+
  const b=btn(
  (exists?"✓ ":"+ ")+ex.name+" · "+ex.group,
  ()=>addExerciseToTraining(ex.id)
  );
- b.disabled=exists;
+
+ b.disabled=!!exists;
  box.append(b);
  }
 }
 
-function renderDraft(){
+function renderTrainingExercises(){
  const box=$("trainingExercises");
  box.replaceChildren();
 
- if(!draft.length){
+ const s=getActiveSession();
+ const list=s?.exercises||[];
+
+ if(!list.length){
  box.append(node("p","Noch keine Übungen hinzugefügt.","empty"));
  }
 
- draft.forEach((ex,index)=>{
+ list.forEach((ex,index)=>{
  const card=node("div","","exercise-card");
  const head=node("div","","row between");
 
  head.append(
  node("strong",ex.name),
  btn("Entfernen",()=>{
- draft.splice(index,1);
- renderDraft();
+ if(!confirm("Übung aus diesem Training entfernen?"))return;
+
+ ex.sets=[];
+ s.exercises.splice(index,1);
+ save();
+ renderTrainingExercises();
  renderPicker();
+ renderDashboard();
  },"danger small")
  );
+
  card.append(head);
 
- const prev=previousExercise(ex.exerciseId,editingSession);
+ const prev=previousExercise(ex.exerciseId,s.id);
 
- card.append(node("p",prev
+ card.append(node(
+ "p",
+ prev
  ?"Letztes Training ("+dateLabel(prev.session.date)+"): "+
- prev.exercise.sets.map(s=>
- fmt(s.kg)+" kg × "+fmt(s.reps)
+ prev.exercise.sets.map(set=>
+ fmt(set.kg||0)+" kg × "+fmt(set.reps||0)
  ).join(" · ")
- :"Noch keine vorherige Einheit.","muted"));
+ :"Noch keine vorherige Einheit.",
+ "muted"
+ ));
 
  const labels=node("div","","set-head");
- ["Satz","Gewicht (kg)","Wdh.",""].forEach(t=>
- labels.append(node("span",t))
- );
+
+ ["Satz","Gewicht (kg)","Wdh.",""].forEach(t=>{
+ labels.append(node("span",t));
+ });
+
  card.append(labels);
 
- ex.sets.forEach((s,i)=>{
+ ex.sets.forEach((set,i)=>{
  const row=node("div","","set-row");
+
  row.append(node("span",String(i+1)+"."));
 
  const kg=document.createElement("input");
@@ -610,168 +1144,82 @@ function renderDraft(){
  kg.min="0";
  kg.step="0.5";
  kg.placeholder="kg";
- kg.value=s.kg;
+ kg.value=set.kg??"";
  kg.setAttribute("aria-label","Gewicht Satz "+(i+1));
- kg.oninput=()=>s.kg=kg.value;
+
+ kg.oninput=()=>{
+ set.kg=kg.value;
+ save();
+ markTrainingSaved();
+ };
 
  const reps=document.createElement("input");
  reps.type="number";
- reps.min="1";
+ reps.min="0";
  reps.step="1";
  reps.placeholder="Wdh.";
- reps.value=s.reps;
+ reps.value=set.reps??"";
  reps.setAttribute("aria-label","Wiederholungen Satz "+(i+1));
- reps.oninput=()=>s.reps=reps.value;
 
- row.append(kg,reps,btn("×",()=>{
+ reps.oninput=()=>{
+ set.reps=reps.value;
+ save();
+ markTrainingSaved();
+ };
+
+ row.append(
+ kg,
+ reps,
+ btn("×",()=>{
+ if(!confirm("Diesen Satz entfernen?"))return;
  ex.sets.splice(i,1);
- renderDraft();
- },"danger small"));
+ save();
+ renderTrainingExercises();
+ },"danger small")
+ );
 
  card.append(row);
  });
 
  card.append(btn("+ Satz hinzufügen",()=>{
  const last=ex.sets[ex.sets.length-1];
+
  ex.sets.push({
- id:uid(),
- kg:last?last.kg:(ex.type==="bodyweight"?"0":""),
+ kg:last?String(last.kg):(
+ ex.type==="bodyweight"?"0":""
+ ),
  reps:""
  });
- renderDraft();
+
+ save();
+ markTrainingSaved();
+ renderTrainingExercises();
  },"secondary small"));
 
  box.append(card);
  });
 }
 
-function resetTraining(){
- editingSession=null;
- draft=[];
- $("trainingDate").value=today();
- $("trainingBodyweight").value="";
- $("trainingNotes").value="";
- $("exerciseSearch").value="";
- $("trainingTitle").textContent="Training erfassen";
- $("saveTraining").textContent="Training speichern";
- renderDraft();
- renderPicker();
+function newTraining(){
+ const current=getActiveSession();
+
+ if(current&&current.exercises.length===0&&
+ !current.notes&&current.bodyweight===null){
+ sessions=sessions.filter(s=>s.id!==current.id);
+ }
+
+ activeSessionId=null;
+ save();
+ renderTraining();
 }
 
 function editTraining(id){
  const s=sessions.find(x=>x.id===id);
  if(!s)return;
 
- editingSession=id;
- $("trainingDate").value=s.date;
- $("trainingBodyweight").value=s.bodyweight??"";
- $("trainingNotes").value=s.notes||"";
- $("trainingTitle").textContent="Training bearbeiten";
- $("saveTraining").textContent="Änderungen speichern";
-
- draft=s.exercises.map(ex=>({
- ...ex,
- sets:ex.sets.map(set=>({
- id:uid(),kg:String(set.kg??0),reps:String(set.reps??"")
- }))
- }));
-
+ activeSessionId=id;
+ save();
  openPage("training");
-}
-
-function saveTraining(){
- const date=$("trainingDate").value;
-
- if(!date){
- alert("Bitte Datum eingeben.");
- return;
- }
-
- if(!draft.length){
- alert("Bitte mindestens eine Übung hinzufügen.");
- return;
- }
-
- const result=[];
-
- for(const ex of draft){
- if(!ex.sets.length){
- alert(ex.name+": Mindestens ein Satz erforderlich.");
- return;
- }
-
- const sets=[];
-
- for(const s of ex.sets){
- const kg=Number(s.kg);
- const reps=Number(s.reps);
-
- if(
- String(s.kg).trim()===""||
- String(s.reps).trim()===""||
- !Number.isFinite(kg)||
- !Number.isInteger(reps)||
- kg<0||reps<1
- ){
- alert(ex.name+": Bitte gültige Satzwerte eingeben.");
- return;
- }
-
- sets.push({kg,reps});
- }
-
- result.push({
- exerciseId:ex.exerciseId,
- name:ex.name,
- group:ex.group,
- type:ex.type,
- sets
- });
- }
-
- const bwText=$("trainingBodyweight").value.trim();
- const bw=bwText===""?null:Number(bwText);
-
- if(bw!==null&&(!Number.isFinite(bw)||bw<=0)){
- alert("Ungültiges Körpergewicht.");
- return;
- }
-
- const id=editingSession||uid();
- const s={
- id,
- date,
- bodyweight:bw,
- notes:$("trainingNotes").value.trim(),
- exercises:result
- };
-
- const oldSessions=sessions;
- const oldWeights=bodyweights;
-
- if(editingSession){
- sessions=sessions.map(x=>x.id===id?s:x);
- }else{
- sessions.push(s);
- }
-
- bodyweights=bodyweights.filter(x=>x.sessionId!==id);
-
- if(bw!==null){
- bodyweights.push({
- id:uid(),sessionId:id,date,weight:bw
- });
- }
-
- if(!save()){
- sessions=oldSessions;
- bodyweights=oldWeights;
- return;
- }
-
- resetTraining();
- openPage("home");
- alert("Training gespeichert.");
 }
 
 function deleteTraining(id){
@@ -783,13 +1231,26 @@ function deleteTraining(id){
  ))return;
 
  sessions=sessions.filter(x=>x.id!==id);
- bodyweights=bodyweights.filter(x=>x.sessionId!==id);
+ bodyweights=bodyweights.filter(w=>w.sessionId!==id);
 
- if(editingSession===id)resetTraining();
+ if(activeSessionId===id)activeSessionId=null;
 
  save();
- renderAll();
+ renderHistory();
+ renderDashboard();
 }
+
+$("trainingDate").oninput=trainingChanged;
+$("trainingBodyweight").oninput=trainingChanged;
+$("trainingNotes").oninput=trainingChanged;
+
+$("newTraining").onclick=()=>{
+ newTraining();
+};
+
+$("exerciseSearch").oninput=renderPicker;
+
+/* TRAININGSHISTORIE */
 
 function renderHistory(){
  const box=$("historyList");
@@ -811,20 +1272,23 @@ function renderHistory(){
  node("h3",dateLabel(s.date)),
  node("small",
  s.exercises.length+" Übungen"+
- (s.bodyweight!=null
+ (s.bodyweight!=null&&Number(s.bodyweight)>0
  ?" · Körpergewicht "+fmt(s.bodyweight)+" kg":"")
  )
  );
 
  for(const ex of s.exercises){
  const item=node("div","","entry");
+
  item.append(
  node("strong",ex.name),
  node("small",ex.sets.map((set,i)=>
  (i+1)+". Satz: "+
- fmt(set.kg)+" kg × "+fmt(set.reps)+" Wdh."
+ (set.kg===""?"–":fmt(set.kg))+" kg × "+
+ (set.reps===""?"–":fmt(set.reps))+" Wdh."
  ).join(" · "))
  );
+
  card.append(item);
  }
 
@@ -833,6 +1297,7 @@ function renderHistory(){
  }
 
  const actions=node("div","","actions");
+
  actions.append(
  btn("Bearbeiten",()=>editTraining(s.id),"secondary small"),
  btn("Löschen",()=>deleteTraining(s.id),"danger small")
@@ -843,16 +1308,57 @@ function renderHistory(){
  }
 }
 
-/* Übungsverwaltung */
+/* ÜBUNGEN – AUTOMATISCH SPEICHERN */
+
 function openExerciseForm(ex=null){
  editingExercise=ex?.id||null;
+
  $("exerciseName").value=ex?.name||"";
  $("exerciseGroup").value=ex?.group||"Beine";
  $("exerciseType").value=ex?.type||"weight";
+
  $("exerciseForm").classList.remove("hidden");
 }
 
-function renderExercises(){
+function saveExerciseAutomatically(){
+ const name=$("exerciseName").value.trim();
+
+ const draft={
+ id:editingExercise,
+ name:$("exerciseName").value,
+ group:$("exerciseGroup").value,
+ type:$("exerciseType").value
+ };
+
+ localStorage.setItem(
+ EXERCISE_FORM_KEY,
+ JSON.stringify(draft)
+ );
+
+ if(!name)return;
+
+ const ex={
+ id:editingExercise||uid(),
+ name,
+ group:draft.group,
+ type:draft.type
+ };
+
+ if(editingExercise){
+ exercises=exercises.map(x=>
+ x.id===editingExercise?ex:x
+ );
+ }else{
+ exercises.push(ex);
+ editingExercise=ex.id;
+ }
+
+ save();
+ renderExerciseList();
+ renderDashboard();
+}
+
+function renderExerciseList(){
  const box=$("exerciseList");
  box.replaceChildren();
 
@@ -862,6 +1368,7 @@ function renderExercises(){
 
  for(const ex of list){
  const item=node("div","","entry");
+
  item.append(
  node("strong",ex.name),
  node("small",ex.group+" · "+
@@ -878,8 +1385,15 @@ function renderExercises(){
  ))return;
 
  exercises=exercises.filter(x=>x.id!==ex.id);
+
+ if(editingExercise===ex.id){
+ editingExercise=null;
+ $("exerciseForm").classList.add("hidden");
+ }
+
  save();
- renderAll();
+ renderExerciseList();
+ renderDashboard();
  },"danger small")
  );
 
@@ -888,53 +1402,92 @@ function renderExercises(){
  }
 }
 
-$("exerciseForm").onsubmit=e=>{
- e.preventDefault();
+function renderExercises(){
+ renderExerciseList();
+}
 
- const name=$("exerciseName").value.trim();
- if(!name)return;
+$("newExercise").onclick=()=>{
+ openExerciseForm();
+};
 
- const ex={
- id:editingExercise||uid(),
- name,
- group:$("exerciseGroup").value,
- type:$("exerciseType").value
- };
-
- if(editingExercise){
- exercises=exercises.map(x=>x.id===editingExercise?ex:x);
- }else{
- exercises.push(ex);
- }
-
+$("closeExercise").onclick=()=>{
  editingExercise=null;
  $("exerciseForm").classList.add("hidden");
- save();
- renderAll();
+ localStorage.removeItem(EXERCISE_FORM_KEY);
 };
 
-/* Körpergewicht */
-$("weightForm").onsubmit=e=>{
- e.preventDefault();
+["exerciseName","exerciseGroup","exerciseType"].forEach(id=>{
+ $(id).addEventListener("input",saveExerciseAutomatically);
+ $(id).addEventListener("change",saveExerciseAutomatically);
+});
 
+/* KÖRPERGEWICHT – AUTOMATISCH SPEICHERN */
+
+function newWeightEntry(){
+ activeWeightId=null;
+ $("weightDate").value=today();
+ $("weightValue").value="";
+ localStorage.removeItem(WEIGHT_FORM_KEY);
+ setStatus("weightStatus","Neuer Eintrag – automatische Speicherung aktiv");
+}
+
+function editWeight(id){
+ const w=bodyweights.find(x=>x.id===id);
+ if(!w)return;
+
+ activeWeightId=id;
+ $("weightDate").value=w.date;
+ $("weightValue").value=w.weight;
+
+ setStatus("weightStatus","Eintrag bearbeiten – automatische Speicherung aktiv");
+ window.scrollTo(0,0);
+}
+
+function weightChanged(){
  const date=$("weightDate").value;
- const weight=Number($("weightValue").value);
+ const raw=$("weightValue").value;
+ const value=Number(raw);
 
- if(!date||!Number.isFinite(weight)||weight<=0){
- alert("Bitte gültige Werte eingeben.");
- return;
+ localStorage.setItem(
+ WEIGHT_FORM_KEY,
+ JSON.stringify({id:activeWeightId,date,raw})
+ );
+
+ if(!date||raw.trim()===""||
+ !Number.isFinite(value)||value<=0)return;
+
+ let w=bodyweights.find(x=>x.id===activeWeightId);
+
+ if(!w){
+ w={
+ id:uid(),
+ date,
+ weight:value,
+ sessionId:null
+ };
+ bodyweights.push(w);
+ activeWeightId=w.id;
+ }else{
+ w.date=date;
+ w.weight=value;
  }
 
- bodyweights.push({
- id:uid(),date,weight,sessionId:null
- });
+ if(w.sessionId){
+ const s=sessions.find(x=>x.id===w.sessionId);
+ if(s){
+ s.date=date;
+ s.bodyweight=value;
+ }
+ }
 
  save();
- $("weightValue").value="";
- renderAll();
-};
+ setStatus("weightStatus","Automatisch gespeichert");
+ renderWeightList();
+ renderWeightChart();
+ renderDashboard();
+}
 
-function renderWeights(){
+function renderWeightList(){
  const box=$("weightList");
  box.replaceChildren();
 
@@ -958,28 +1511,7 @@ function renderWeights(){
  const actions=node("div","","actions");
 
  actions.append(
- btn("Bearbeiten",()=>{
- const input=prompt("Körpergewicht in kg",String(w.weight));
- if(input===null)return;
-
- const value=Number(input.replace(",","."));
-
- if(!Number.isFinite(value)||value<=0){
- alert("Ungültiges Gewicht.");
- return;
- }
-
- w.weight=value;
-
- if(w.sessionId){
- const s=sessions.find(x=>x.id===w.sessionId);
- if(s)s.bodyweight=value;
- }
-
- save();
- renderAll();
- },"secondary small"),
-
+ btn("Bearbeiten",()=>editWeight(w.id),"secondary small"),
  btn("Löschen",()=>{
  if(!confirm("Gewichtseintrag löschen?"))return;
 
@@ -990,25 +1522,49 @@ function renderWeights(){
  if(s)s.bodyweight=null;
  }
 
+ if(activeWeightId===w.id)newWeightEntry();
+
  save();
- renderAll();
+ renderWeights();
+ renderDashboard();
  },"danger small")
  );
 
  item.append(actions);
  box.append(item);
  }
-
- drawChart("weightChart",
- [...bodyweights].sort((a,b)=>a.date.localeCompare(b.date))
- .map(w=>({label:dateLabel(w.date),value:w.weight})),
- "kg");
 }
 
-/* Diagramme */
+function renderWeightChart(){
+ drawChart(
+ "weightChart",
+ [...bodyweights]
+ .filter(w=>Number.isFinite(Number(w.weight))&&Number(w.weight)>0)
+ .sort((a,b)=>a.date.localeCompare(b.date))
+ .map(w=>({
+ label:dateLabel(w.date),
+ value:Number(w.weight)
+ })),
+ "kg"
+ );
+}
+
+function renderWeights(){
+ renderWeightList();
+ renderWeightChart();
+}
+
+$("newWeight").onclick=newWeightEntry;
+$("weightDate").oninput=weightChanged;
+$("weightValue").oninput=weightChanged;
+
+/* DIAGRAMME */
+
 function drawChart(id,points,unit){
  const box=$(id);
  box.replaceChildren();
+
+ points=points.filter(p=>Number.isFinite(p.value));
 
  if(!points.length){
  box.append(node("p","Noch keine Daten vorhanden.","empty"));
@@ -1016,8 +1572,10 @@ function drawChart(id,points,unit){
  }
 
  const values=points.map(x=>x.value);
+
  let min=Math.min(...values);
  let max=Math.max(...values);
+
  const pad=Math.max((max-min)*.2,1);
 
  min=Math.max(0,min-pad);
@@ -1033,13 +1591,16 @@ function drawChart(id,points,unit){
 
  const ns="http://www.w3.org/2000/svg";
  const svg=document.createElementNS(ns,"svg");
+
  svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
 
  function shape(tag,attrs,content){
  const el=document.createElementNS(ns,tag);
+
  for(const [key,value] of Object.entries(attrs)){
  el.setAttribute(key,String(value));
  }
+
  if(content!==undefined)el.textContent=content;
  svg.append(el);
  }
@@ -1061,8 +1622,11 @@ function drawChart(id,points,unit){
 
  if(points.length>1){
  shape("polyline",{
- points:points.map((p,i)=>`${x(i)},${y(p.value)}`).join(" "),
- fill:"none",stroke:"#f7d57c",
+ points:points.map((p,i)=>
+ `${x(i)},${y(p.value)}`
+ ).join(" "),
+ fill:"none",
+ stroke:"#f7d57c",
  "stroke-width":3,
  "stroke-linecap":"round",
  "stroke-linejoin":"round"
@@ -1072,7 +1636,9 @@ function drawChart(id,points,unit){
  points.forEach((p,i)=>{
  shape("circle",{
  cx:x(i),cy:y(p.value),r:4,
- fill:"white",stroke:"#f7d57c","stroke-width":2
+ fill:"white",
+ stroke:"#f7d57c",
+ "stroke-width":2
  });
 
  if(i===0||i===points.length-1||points.length<=5){
@@ -1091,7 +1657,8 @@ function drawChart(id,points,unit){
  box.append(svg);
 }
 
-/* Fortschritt */
+/* TRAININGSFORTSCHRITT */
+
 function progressRecords(id){
  const records=[];
 
@@ -1099,12 +1666,22 @@ function progressRecords(id){
  const ex=s.exercises.find(e=>e.exerciseId===id);
  if(!ex||!ex.sets.length)continue;
 
+ const valid=ex.sets.filter(set=>
+ String(set.kg??"").trim()!==""&&
+ String(set.reps??"").trim()!==""&&
+ Number.isFinite(Number(set.kg))&&
+ Number.isFinite(Number(set.reps))&&
+ Number(set.kg)>=0&&Number(set.reps)>0
+ );
+
+ if(!valid.length)continue;
+
  records.push({
  date:s.date,
- maxKg:Math.max(...ex.sets.map(x=>x.kg)),
- maxReps:Math.max(...ex.sets.map(x=>x.reps)),
- first:ex.sets[0],
- sets:ex.sets
+ maxKg:Math.max(...valid.map(x=>Number(x.kg))),
+ maxReps:Math.max(...valid.map(x=>Number(x.reps))),
+ first:valid[0],
+ sets:valid
  });
  }
 
@@ -1141,17 +1718,23 @@ function renderProgress(){
  const records=progressRecords(ex.id);
 
  if(!records.length){
- summary.append(node("p","Noch keine Trainingsdaten.","empty"));
+ summary.append(node(
+ "p","Noch keine vollständigen Trainingsdaten.","empty"
+ ));
  drawChart("exerciseChart",[],"kg");
  return;
  }
 
  const last=records[records.length-1];
+
  const metrics=[
  ["Trainiert",records.length+" ×"],
- ["Letzter 1. Satz",fmt(last.first.kg)+" kg × "+fmt(last.first.reps)],
- ["Höchstes Gewicht",fmt(Math.max(...records.map(x=>x.maxKg)))+" kg"],
- ["Meiste Wiederholungen",fmt(Math.max(...records.map(x=>x.maxReps)))]
+ ["Letzter 1. Satz",
+ fmt(last.first.kg)+" kg × "+fmt(last.first.reps)],
+ ["Höchstes Gewicht",
+ fmt(Math.max(...records.map(x=>x.maxKg)))+" kg"],
+ ["Meiste Wiederholungen",
+ fmt(Math.max(...records.map(x=>x.maxReps)))]
  ];
 
  for(const [label,value] of metrics){
@@ -1169,23 +1752,135 @@ function renderProgress(){
 
  for(const r of [...records].reverse()){
  const item=node("div","","entry");
+
  item.append(
  node("strong",dateLabel(r.date)),
  node("small",r.sets.map((s,i)=>
- (i+1)+". Satz: "+fmt(s.kg)+" kg × "+fmt(s.reps)
+ (i+1)+". Satz: "+
+ fmt(s.kg)+" kg × "+fmt(s.reps)
  ).join(" · "))
  );
+
  history.append(item);
  }
 }
 
-/* Backup */
+$("progressExercise").onchange=renderProgress;
+
+/* KALORIENBEDARFSRECHNER */
+
+function loadCalculatorInputs(){
+ $("calcSex").value=calculator.sex??"male";
+ $("calcAge").value=calculator.age??"43";
+ $("calcWeight").value=calculator.weight??"85.4";
+ $("calcHeight").value=calculator.height??"183";
+ $("calcActivity").value=calculator.activity??"1.5";
+ $("calcCustomActivity").value=calculator.customActivity??"1.5";
+}
+
+function calculatorChanged(){
+ calculator={
+ sex:$("calcSex").value,
+ age:$("calcAge").value,
+ weight:$("calcWeight").value,
+ height:$("calcHeight").value,
+ activity:$("calcActivity").value,
+ customActivity:$("calcCustomActivity").value
+ };
+
+ save();
+ renderCalculator();
+}
+
+function renderCalculator(){
+ const custom=calculator.activity==="custom";
+
+ $("customActivityBox").classList.toggle("hidden",!custom);
+
+ const age=Number(calculator.age);
+ const weight=Number(calculator.weight);
+ const height=Number(calculator.height);
+ const factor=Number(custom
+ ?calculator.customActivity
+ :calculator.activity);
+
+ const valid=
+ Number.isFinite(age)&&age>=15&&age<=110&&
+ Number.isFinite(weight)&&weight>=20&&weight<=400&&
+ Number.isFinite(height)&&height>=100&&height<=250&&
+ Number.isFinite(factor)&&factor>=1&&factor<=3;
+
+ const ids=[
+ "calcMaintenance","calcBmr","calcFactor",
+ "calcDeficit10","calcDeficit20",
+ "calcSurplus5","calcSurplus10"
+ ];
+
+ if(!valid){
+ for(const id of ids)$(id).textContent="–";
+ $("calcFormula").textContent=
+ "Bitte gültige Werte für Alter, Gewicht, Grösse und Aktivität eingeben.";
+ return;
+ }
+
+ const sexConstant=calculator.sex==="female"?-161:5;
+
+ const bmr=
+ 10*weight+
+ 6.25*height-
+ 5*age+
+ sexConstant;
+
+ const maintenance=bmr*factor;
+
+ $("calcMaintenance").textContent=
+ Math.round(maintenance)+" kcal";
+
+ $("calcBmr").textContent=Math.round(bmr);
+ $("calcFactor").textContent=fmt(factor);
+
+ $("calcDeficit10").textContent=
+ Math.round(maintenance*.9);
+
+ $("calcDeficit20").textContent=
+ Math.round(maintenance*.8);
+
+ $("calcSurplus5").textContent=
+ Math.round(maintenance*1.05);
+
+ $("calcSurplus10").textContent=
+ Math.round(maintenance*1.10);
+
+ $("calcFormula").textContent=
+ "Grundumsatz: (10 × "+fmt(weight)+
+ ") + (6.25 × "+fmt(height)+
+ ") − (5 × "+fmt(age)+
+ ") "+(sexConstant>0?"+ 5":"− 161")+
+ " = "+Math.round(bmr)+" kcal. "+
+ "Gesamtbedarf: "+Math.round(bmr)+
+ " × "+fmt(factor)+" = "+
+ Math.round(maintenance)+" kcal pro Tag.";
+}
+
+[
+ "calcSex","calcAge","calcWeight",
+ "calcHeight","calcActivity","calcCustomActivity"
+].forEach(id=>{
+ $(id).addEventListener("input",calculatorChanged);
+ $(id).addEventListener("change",calculatorChanged);
+});
+
+/* DATENSICHERUNG */
+
 $("exportBackup").onclick=()=>{
  const data={
  app:"Fitness Tracker",
- version:1,
+ version:2,
  created:new Date().toISOString(),
- exercises,sessions,bodyweights
+ exercises,
+ sessions,
+ bodyweights,
+ calculator
  };
 
  const blob=new Blob([JSON.stringify(data,null,2)],{
@@ -1194,8 +1889,10 @@ $("exportBackup").onclick=()=>{
 
  const url=URL.createObjectURL(blob);
  const a=document.createElement("a");
+
  a.href=url;
  a.download="fitness-backup-"+today()+".json";
+
  document.body.append(a);
  a.click();
  a.remove();
@@ -1225,21 +1922,34 @@ $("backupFile").onchange=async e=>{
  "Backup importieren? Bestehende Fitness-Daten werden ersetzt."
  ))return;
 
- const old={exercises,sessions,bodyweights};
+ const old={
+ exercises,sessions,bodyweights,calculator,activeSessionId
+ };
 
  exercises=data.exercises;
  sessions=data.sessions;
  bodyweights=data.bodyweights;
 
+ if(data.calculator&&typeof data.calculator==="object"){
+ calculator=data.calculator;
+ }
+
+ activeSessionId=null;
+
  if(!save()){
  exercises=old.exercises;
  sessions=old.sessions;
  bodyweights=old.bodyweights;
+ calculator=old.calculator;
+ activeSessionId=old.activeSessionId;
  return;
  }
 
- resetTraining();
+ loadCalculatorInputs();
+ newWeightEntry();
+ renderAll();
  openPage("home");
+
  alert("Backup erfolgreich importiert.");
 
  }catch(err){
@@ -1249,48 +1959,41 @@ $("backupFile").onchange=async e=>{
  }
 };
 
-/* Schaltflächen */
-$("newTraining").onclick=()=>{
- if(draft.length&&!confirm(
- "Ungespeicherte Eingaben verwerfen?"
- ))return;
- resetTraining();
-};
+/* ALLE ÜBERSICHTEN AKTUALISIEREN */
 
-$("cancelTraining").onclick=()=>{
- if(draft.length&&!confirm(
- "Ungespeicherte Eingaben zurücksetzen?"
- ))return;
- resetTraining();
-};
-
-$("saveTraining").onclick=saveTraining;
-$("exerciseSearch").oninput=renderPicker;
-
-$("newExercise").onclick=()=>openExerciseForm();
-
-$("cancelExercise").onclick=()=>{
- editingExercise=null;
- $("exerciseForm").classList.add("hidden");
-};
-
-$("progressExercise").onchange=renderProgress;
-
-/* Alles aktualisieren */
 function renderAll(){
  renderDashboard();
- renderDraft();
- renderPicker();
  renderHistory();
- renderExercises();
- renderWeights();
+ renderExerciseList();
+ renderWeightList();
+ renderWeightChart();
  renderProgress();
+ renderCalculator();
 }
 
-/* Start */
+/* START */
+
 $("trainingDate").value=today();
 $("weightDate").value=today();
+
+loadCalculatorInputs();
+
+if(exerciseFormDraft&&typeof exerciseFormDraft==="object"){
+ editingExercise=exerciseFormDraft.id||null;
+
+ $("exerciseName").value=exerciseFormDraft.name||"";
+ $("exerciseGroup").value=exerciseFormDraft.group||"Beine";
+ $("exerciseType").value=exerciseFormDraft.type||"weight";
+}
+
+if(weightFormDraft&&typeof weightFormDraft==="object"){
+ activeWeightId=weightFormDraft.id||null;
+ $("weightDate").value=weightFormDraft.date||today();
+ $("weightValue").value=weightFormDraft.raw||"";
+}
+
 renderAll();
+renderTraining();
 
 </script>
 </body>
