@@ -270,6 +270,10 @@ label{
 </div>
 
 <div class="notice" id="lastTraining"></div>
+
+<h3>Mein Gewichtsverlauf</h3>
+<div id="homeWeightChart" class="chart"></div>
+
 </section>
 
 <h2>Meine Kategorien</h2>
@@ -920,6 +924,24 @@ function renderDashboard(){
  ?"Letztes Training: "+dateLabel(last.date)+
  " · "+last.exercises.length+" Übungen"
  :"Noch keine Trainingseinheit gespeichert.";
+
+ renderHomeWeightChart();
+}
+
+/* GEWICHTSDIAGRAMM AUF HAUPTSEITE */
+
+function renderHomeWeightChart(){
+ const records=[...bodyweights]
+ .filter(w=>
+ Number.isFinite(Number(w.weight))&&Number(w.weight)>0
+ )
+ .sort((a,b)=>a.date.localeCompare(b.date))
+ .map(w=>({
+ label:dateLabel(w.date),
+ value:Number(w.weight)
+ }));
+
+ drawChart("homeWeightChart",records,"kg");
 }
 
 /* TRAINING – AUTOMATISCH SPEICHERN */
@@ -1553,6 +1575,8 @@ function renderWeights(){
  renderWeightList();
  renderWeightChart();
 }
+
+/* GEWICHT UND DIAGRAMM AKTUALISIEREN */
 
 $("newWeight").onclick=newWeightEntry;
 $("weightDate").oninput=weightChanged;
